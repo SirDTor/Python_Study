@@ -1,0 +1,13 @@
+result = []
+
+def invert_number(number):
+    global result
+    while number > 0:
+        result.append(number % 10)
+        number //= 10
+    result.reverse
+    
+number = 123456789
+print(number)
+invert_number(number)
+print(result)
