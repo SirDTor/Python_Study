@@ -1,8 +1,8 @@
 strokes = ["left", "rr", "bright aright", "ok", "enough", "stop", "jokes", "right"]
-check_word = "right"
-left_word = "left"
-result_strokes = []
+word_right = "right"
+word_left = "left"
+strokes_result = []
 for stroke in strokes:
-    temp_strokes = stroke.replace("right","left")
-    result_strokes.append(temp_strokes)
-print(result_strokes)
+    strokes_temp = stroke.replace(word_right,word_left)
+    strokes_result.append(strokes_temp)
+print(strokes_result)
