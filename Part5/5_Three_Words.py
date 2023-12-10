@@ -1,4 +1,5 @@
 from word2number import w2n
+
 text = "start 5 one two tree 7 end"
 array = text.split(' ')
 num_of_word = 0

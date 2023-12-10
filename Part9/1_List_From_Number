@@ -1,12 +1,15 @@
+from Tools.scripts.fixcid import Reverse
+
 result = []
 
-def invert_number(number):
+
+def invert_number(num):
     global result
-    while number > 0:
-        result.append(number % 10)
-        number //= 10
-    result.reverse
-    
+    while num > 0:
+        result.append(num % 10)
+        num //= 10
+
+
 number = 123456789
 print(number)
 invert_number(number)
