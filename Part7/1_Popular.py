@@ -1,4 +1,6 @@
 from collections import OrderedDict
+import re
+
 
 chars_popularity = {}
 words_popularity = {}
@@ -18,7 +20,7 @@ def FindPopularChars(origtext: str):
 
 def FindPopularWords(origtext: str):
     dataWords = OrderedDict()
-    arrayOfWord = origtext.split(' ')
+    arrayOfWord = re.split(", | ", origtext)
     for word in arrayOfWord:
         if dataWords.__contains__(word):
             dataWords[word] += 1
