@@ -6,32 +6,32 @@ chars_popularity = {}
 words_popularity = {}
 
 
-def FindPopularChars(origtext: str):
-    dataChars = OrderedDict()
+def findpopularchars(origtext: str):
+    datachars = OrderedDict()
     for char in origtext:
         if char != ' ':
-            if dataChars.__contains__(char):
-                dataChars[char] += 1
+            if datachars.__contains__(char):
+                datachars[char] += 1
             else:
-                dataChars[char] = 1
-            countChar = dataChars[char]
-            chars_popularity[char] = countChar
+                datachars[char] = 1
+            countchar = datachars[char]
+            chars_popularity[char] = countchar
 
 
-def FindPopularWords(origtext: str):
-    dataWords = OrderedDict()
-    arrayOfWord = re.split(", | ", origtext)
-    for word in arrayOfWord:
-        if dataWords.__contains__(word):
-            dataWords[word] += 1
+def findpopularwords(origtext: str):
+    datawords = OrderedDict()
+    arraypofword = re.split(", | ", origtext)
+    for word in arraypofword:
+        if datawords.__contains__(word):
+            datawords[word] += 1
         else:
-            dataWords[word] = 1
-        countWords = dataWords[word]
-        words_popularity[word] = countWords
+            datawords[word] = 1
+        countwords = datawords[word]
+        words_popularity[word] = countwords
 
 
 text = "hello, word of word"
-FindPopularChars(text)
-FindPopularWords(text)
+findpopularchars(text)
+findpopularwords(text)
 print(chars_popularity)
 print(words_popularity)
