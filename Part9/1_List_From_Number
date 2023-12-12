@@ -1,5 +1,3 @@
-from Tools.scripts.fixcid import Reverse
-
 result = []
 
 
