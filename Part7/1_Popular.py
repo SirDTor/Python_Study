@@ -9,7 +9,7 @@ words_popularity = {}
 def findpopularchars(origtext: str):
     datachars = OrderedDict()
     for char in origtext:
-        if char != ' ':
+        if char != ' ' and char !=',':
             if datachars.__contains__(char):
                 datachars[char] += 1
             else:
